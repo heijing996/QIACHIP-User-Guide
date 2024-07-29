@@ -1,0 +1,13 @@
+site_name: ManualWebsite
+
+
+theme: 
+
+  name: material
+
+nav:
+  - Home: index.md
+  - About: MKdocs网站搭建.md
+  - TX180: TX180.docx
+  
+
