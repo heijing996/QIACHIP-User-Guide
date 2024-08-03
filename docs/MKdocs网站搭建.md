@@ -8,7 +8,7 @@
 
 产品文档 制作工具 
 
-https://squidfunk.github.io/mkdocs-material/
+https://squidfunk.github.io/mkdocs-material
 
 简单有效的文档
 在 Markdown 中编写文档，并在几分钟内创建一个专业的静态站点 - 可搜索、可定制、60+ 种语言，适用于所有设备。
@@ -24,7 +24,7 @@ docker 这个工具经常会用到，不仅仅是我们做网站，比如NAS里�
 3. SEO 搜索好
 
 ### 我了解的资料
-1. 示范网站：http://iquan.fun/
+1. 示范网站：http://iquan.fun
 2. 虽然不用服务器，但是是靠部署在github上的站点进行外网访问
 3. SEO并不好，内容很多都无法搜索
 4. 自动翻译没有玩家试过，因为用钱
