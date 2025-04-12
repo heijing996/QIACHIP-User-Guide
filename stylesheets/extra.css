@@ -1,0 +1,82 @@
+/* 卡片网格容器样式
+   - 使用弹性布局实现响应式设计
+   - 自动换行显示卡片
+   - 在卡片之间平均分配空间 */
+.router-grid {
+  display: flex;          
+  flex-wrap: wrap;        
+  justify-content: space-between; /* 平均分配空间 */
+  gap: 20px;             /* 卡片之间的间距 */
+  margin: 20px 10px;     /* 网格容器的外边距 */
+  max-width: 100%;       /* 确保不超出容器宽度 */
+}
+
+/* 单个卡片容器样式
+   - 垂直方向的弹性布局
+   - 固定尺寸和最小宽度
+   - 可点击区域的样式设置 */
+.router-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: calc(33.33% - 20px); /* 宽度为容器三分之一减去间距 */
+  min-width: 180px;     /* 卡片最小宽度 */
+  height: 280px;        /* 卡片固定高度 */
+  text-decoration: none;/* 移除链接下划线 */
+  color: #3f51b5;      /* 卡片文字颜色 */
+  cursor: pointer;      /* 鼠标悬停时显示手型 */
+}
+
+/* 卡片内文字样式
+   - 居中对齐
+   - 加粗显示
+   - 固定字体大小 */
+.router-card span {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 卡片内图片样式
+   - 固定尺寸
+   - 保持图片比例
+   - 底部间距设置 */
+.router-card img {
+  width: 180px;         /* 图片固定宽度 */
+  height: 180px;        /* 图片固定高度 */
+  object-fit: contain;  /* 保持图片比例不变形 */
+  margin-bottom: 10px;  /* 图片底部间距 */
+}
+
+/* 卡片内链接文字样式
+   - 文字居中
+   - 占满容器宽度 */
+.router-card a {
+  text-align: center;   /* 文字居中对齐 */
+  width: 100%;         /* 宽度占满容器 */
+}
+
+/* 卡片悬停效果
+   - 上移动画
+   - 阴影效果
+   - 平滑过渡 */
+.router-card:hover {
+  transform: translateY(-5px);  /* 向上移动5像素 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.377);  /* 添加阴影效果 */
+}
+
+
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 32%;
+  height: auto;
+}
