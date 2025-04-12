@@ -3,12 +3,12 @@
    - 自动换行显示卡片
    - 在卡片之间平均分配空间 */
 .router-grid {
-  display: flex;          
-  flex-wrap: wrap;        
-  justify-content: space-between; /* 平均分配空间 */
-  gap: 20px;             /* 卡片之间的间距 */
-  margin: 20px 10px;     /* 网格容器的外边距 */
-  max-width: 100%;       /* 确保不超出容器宽度 */
+  display: flex;          /* 使用弹性布局，使子元素在一行内排列 */
+  flex-wrap: wrap;        /* 允许子元素在空间不足时换行 */
+  justify-content: space-between; /* 平均分配空间，项目之间间距相等 */
+  gap: 20px;             /* 设置网格项目之间的间距为20像素 */
+  margin: 20px 10px;     /* 上下外边距20像素，左右外边距10像素 */
+  max-width: 100%;       /* 最大宽度为父容器的100% */
 }
 
 /* 单个卡片容器样式
@@ -16,17 +16,17 @@
    - 固定尺寸和最小宽度
    - 可点击区域的样式设置 */
 .router-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  display: flex;          /* 使用弹性布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center;    /* 子元素在水平方向居中对齐 */
+  justify-content: center; /* 子元素在垂直方向居中对齐 */
+  padding: 10px;          /* 内边距为10像素 */
   width: calc(33.33% - 20px); /* 宽度为容器三分之一减去间距 */
-  min-width: 180px;     /* 卡片最小宽度 */
-  height: 280px;        /* 卡片固定高度 */
-  text-decoration: none;/* 移除链接下划线 */
-  color: #3f51b5;      /* 卡片文字颜色 */
-  cursor: pointer;      /* 鼠标悬停时显示手型 */
+  min-width: 180px;     /* 最小宽度为180像素，防止在小屏幕上变得过小 */
+  height: 280px;        /* 固定高度为280像素 */
+  text-decoration: none;/* 移除链接的下划线 */
+  color: #3f51b5;      /* 文字颜色设置为靛蓝色 */
+  cursor: pointer;      /* 鼠标悬停时显示手型光标 */
 }
 
 /* 卡片内文字样式
@@ -34,10 +34,10 @@
    - 加粗显示
    - 固定字体大小 */
 .router-card span {
-  text-align: center;
-  width: 100%;
-  font-weight: bold;
-  font-size: 16px;
+  text-align: center;    /* 文本居中对齐 */
+  width: 100%;           /* 宽度占满父容器 */
+  font-weight: bold;     /* 文字加粗显示 */
+  font-size: 16px;       /* 字体大小为16像素 */
 }
 
 /* 卡片内图片样式
@@ -45,18 +45,18 @@
    - 保持图片比例
    - 底部间距设置 */
 .router-card img {
-  width: 180px;         /* 图片固定宽度 */
-  height: 180px;        /* 图片固定高度 */
-  object-fit: contain;  /* 保持图片比例不变形 */
-  margin-bottom: 10px;  /* 图片底部间距 */
+  width: 180px;         /* 图片宽度固定为180像素 */
+  height: 180px;        /* 图片高度固定为180像素 */
+  object-fit: contain;  /* 保持图片比例，确保图片完全显示在容器内 */
+  margin-bottom: 10px;  /* 图片底部外边距为10像素 */
 }
 
 /* 卡片内链接文字样式
    - 文字居中
    - 占满容器宽度 */
 .router-card a {
-  text-align: center;   /* 文字居中对齐 */
-  width: 100%;         /* 宽度占满容器 */
+  text-align: center;   /* 文本居中对齐 */
+  width: 100%;         /* 宽度占满父容器 */
 }
 
 /* 卡片悬停效果
@@ -64,19 +64,49 @@
    - 阴影效果
    - 平滑过渡 */
 .router-card:hover {
-  transform: translateY(-5px);  /* 向上移动5像素 */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.377);  /* 添加阴影效果 */
+  transform: translateY(-5px);  /* 悬停时向上移动5像素 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.377);  /* 添加阴影效果：水平偏移0，垂直偏移5像素，模糊15像素，黑色透明度0.377 */
 }
 
 
 .image-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  display: flex;           /* 使用弹性布局 */
+  justify-content: space-between; /* 子元素之间平均分配空间 */
+  align-items: center;     /* 子元素在垂直方向居中对齐 */
+  gap: 10px;               /* 子元素之间的间距为10像素 */
 }
 
 .image-grid img {
-  width: 32%;
-  height: auto;
+  width: 32%;              /* 图片宽度为父容器的32%，确保一行放置3张图片 */
+  height: auto;            /* 高度自动计算，保持图片原始比例 */
+}
+
+/* 控制图片大小 */
+img[alt="5541.png"] {
+  max-width: 300px;        /* 最大宽度为300像素 */
+  height: auto;            /* 高度自动计算，保持图片原始比例 */
+  cursor: pointer;         /* 鼠标悬停时显示手型光标，提示可点击 */
+}
+
+img[alt="3.png558fa.png"] {
+  max-width: 400px;        /* 最大宽度为400像素 */
+  height: auto;            /* 高度自动计算，保持图片原始比例 */
+  cursor: pointer;         /* 鼠标悬停时显示手型光标，提示可点击 */
+}
+
+img[alt="56fa.png"] {
+  max-width: 350px;        /* 最大宽度为350像素 */
+  height: auto;            /* 高度自动计算，保持图片原始比例 */
+  cursor: pointer;         /* 鼠标悬停时显示手型光标，提示可点击 */
+}
+
+/* 创建图片点击放大效果 */
+.md-content img {
+  transition: transform 0.8s ease;  /* 添加变换过渡效果，持续0.3秒，缓动函数为ease */
+}
+
+.md-content img:active {
+  transform: scale(1.5);   /* 点击激活时放大到原始大小的1.5倍 */
+  position: relative;      /* 设置相对定位，使元素可以使用z-index */
+  z-index: 100;            /* 设置较高的层级，确保放大后的图片显示在其他元素上方 */
 }
