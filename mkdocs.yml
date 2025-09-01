@@ -4,11 +4,18 @@ site_name: ManualWebsite
 theme: 
 
   name: material
+  custom_dir: overrides
 
 nav:
   - Home: index.md
   - About: MKdocs网站搭建.md
   - TX180: TX180.docx
-  - TX180MD：TX180.md
+  - TX180MD: TX180.md
+
+# extra_javascript:
+#   - https://giscus.app/client.js
+
+
+  
   
 
